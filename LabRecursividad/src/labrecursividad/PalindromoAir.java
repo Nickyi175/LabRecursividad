@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package practicasrecursividad;
+package labrecursividad;
 
 /**
  *
@@ -92,10 +92,11 @@ public class PalindromoAir {
     }
     private double income(double totalIngresos,int posicion){
        if(posicion>=ticket.length){
-            return totalIngresos+=0;
+            return totalIngresos;
         } 
        if(ticket[posicion]!=null){
-           return totalIngresos+= ticket[posicion].getTotalPagado();
+           totalIngresos+= ticket[posicion].getTotalPagado();
+           return income(totalIngresos,posicion+1);
         }
         return income(totalIngresos,posicion+1);
     }
@@ -116,7 +117,7 @@ public class PalindromoAir {
             ticket[firstAvailable()] = new Ticket(nombrePasajero, totalPago);
             
             System.out.println("--------Monto a Pagar---------"+"\nNombre: "+ticket[posicion].getNombrePasajero()+
-                    "Monto a pagar: Lps. "+ticket[posicion].getTotalPagado());      
+                    "\nMonto a pagar: Lps. "+ticket[posicion].getTotalPagado());      
         }   
     }
     

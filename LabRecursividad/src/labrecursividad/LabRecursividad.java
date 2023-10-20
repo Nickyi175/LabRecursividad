@@ -4,10 +4,6 @@
  */
 package labrecursividad;
 
-/**
- *
- * @author tomea
- */
 public class LabRecursividad {
 
     /**
