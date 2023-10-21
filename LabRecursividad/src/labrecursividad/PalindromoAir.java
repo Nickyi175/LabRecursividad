@@ -89,9 +89,10 @@ public static Ticket[] ticket;
        printPassengers(0);
     }
     private void printPassengers(int posicion){
-        if(firstAvailable()==-1){
+        if(posicion>=ticket.length) {
             System.out.println("se sobrepasó");
-        } else
+            return;
+        } 
         if(ticket[posicion]!=null){
            ticket[posicion].print();
         }

@@ -36,6 +36,7 @@ PalindromoAir pali;
         nombre = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         lista = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,7 +46,7 @@ PalindromoAir pali;
         jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setText("RECURSIVE AIRLINE");
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(204, 204, 204));
         jButton1.setText("Vender");
@@ -60,7 +61,7 @@ PalindromoAir pali;
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 153));
+        jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(204, 204, 204));
         jButton2.setText("Cancelar Boletos");
@@ -70,7 +71,7 @@ PalindromoAir pali;
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(0, 153, 153));
+        jButton3.setBackground(new java.awt.Color(0, 102, 102));
         jButton3.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(204, 204, 204));
         jButton3.setText("Despachar");
@@ -80,7 +81,7 @@ PalindromoAir pali;
             }
         });
 
-        imprimir.setBackground(new java.awt.Color(0, 153, 153));
+        imprimir.setBackground(new java.awt.Color(0, 102, 102));
         imprimir.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
         imprimir.setForeground(new java.awt.Color(204, 204, 204));
         imprimir.setText("Imprimir");
@@ -90,7 +91,7 @@ PalindromoAir pali;
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(0, 153, 153));
+        jButton5.setBackground(new java.awt.Color(0, 102, 102));
         jButton5.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(204, 204, 204));
         jButton5.setText("Salir");
@@ -100,9 +101,18 @@ PalindromoAir pali;
             }
         });
 
+        nombre.setBackground(new java.awt.Color(204, 204, 204));
+        nombre.setForeground(new java.awt.Color(0, 0, 0));
+        nombre.setCaretColor(new java.awt.Color(0, 0, 0));
+
+        lista.setBackground(new java.awt.Color(153, 153, 153));
         lista.setColumns(20);
         lista.setRows(5);
         jScrollPane1.setViewportView(lista);
+
+        jLabel2.setFont(new java.awt.Font("Broadway", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel2.setText("Ingrese su nombre:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -114,21 +124,20 @@ PalindromoAir pali;
                         .addGap(71, 71, 71)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
+                        .addGap(86, 86, 86)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(142, 142, 142)
-                                .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jButton2)
-                                    .addComponent(jButton3)
-                                    .addComponent(imprimir)
-                                    .addComponent(jButton5))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(61, 61, 61))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButton2)
+                                .addComponent(jButton3)
+                                .addComponent(imprimir)
+                                .addComponent(jButton5)))
+                        .addGap(70, 70, 70)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)
+                            .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {imprimir, jButton1, jButton2, jButton3, jButton5});
@@ -138,22 +147,27 @@ PalindromoAir pali;
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+                        .addComponent(jButton2)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton3)
                         .addGap(18, 18, 18)
-                        .addComponent(imprimir))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jButton5)
-                .addContainerGap(17, Short.MAX_VALUE))
+                        .addComponent(imprimir)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton5))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {imprimir, jButton1, jButton2, jButton3, jButton5});
@@ -256,6 +270,7 @@ PalindromoAir pali;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea lista;
