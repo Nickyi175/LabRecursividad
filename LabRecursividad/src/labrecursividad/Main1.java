@@ -9,7 +9,8 @@ public class Main1 {
     
     public static void main(String[] args) {
         // Crear objeto de la clase PalindromoAir
-        PalindromoAir palindromoAir = new PalindromoAir();
+        Main main=new Main();
+        PalindromoAir palindromoAir = new PalindromoAir(main);
         String opciones;
         String nombrePasajero;
         Scanner lea = new Scanner(System.in);
@@ -19,6 +20,13 @@ public class Main1 {
                 System.out.println("Menu Principal");
                 System.out.println("\nEliga una opcion (1-5)" + "\n1. Vender boletos" + "\n2. Cancelar un boleto" + "\n3. Despachar el avion" + 
                         "\n4. Imprimir el detalle de todos los pasajeros" + "\n 5. Salir");
+                
+//                for(int i=0;i<palindromoAir.ticket.length;i++){
+//                    if(palindromoAir.ticket[i]>0){
+//                    System.out.println(palindromoAir.ticket[i].nombrePasajero); 
+//                }
+//                }
+               
                
             //Ingresar Seccion
        System.out.print("\nIngrese la opciones a la que desea ingresar: ");

@@ -6,12 +6,14 @@ package labrecursividad;
 
 public class Ticket {
     //Atributos 
+   private Main main;
    public String nombrePasajero;
    public double totalPagado;
    
-   public Ticket(String nombrePasajero,double totalPagado){
+   public Ticket(String nombrePasajero,double totalPagado,Main main){
        this.nombrePasajero=nombrePasajero;
        this.totalPagado=totalPagado;
+       this.main=main;
    }
    
     //Set y get
@@ -30,10 +32,13 @@ public class Ticket {
    public double getTotalPagado(){
        return totalPagado;
    }
-   
+     
    public void print(){
-       System.out.println("-------Datos de Ticket-------"+"\nNombre del Pasajero: "+nombrePasajero+
-       "\nTotal Pagado Ticket: Lps. "+totalPagado);
+       String texto="-------Datos de Ticket-------"+"\nNombre del Pasajero: "+nombrePasajero+
+       "\nTotal Pagado Ticket: Lps. "+totalPagado;
+       
+        main.listado(texto);
    }
+   
     
 }
