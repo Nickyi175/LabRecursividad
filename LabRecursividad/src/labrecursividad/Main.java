@@ -191,10 +191,12 @@ PalindromoAir pali;
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        lista.setText("");
         pali.sellTicket(nombre.getText());
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        lista.setText("");
         for (int i = 0; i < pali.ticket.length; i++) {
             if (pali.ticket[i] == null) {
                 System.out.println(i);
@@ -214,6 +216,7 @@ PalindromoAir pali;
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        lista.setText("");
         pali.dispatch();
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -222,11 +225,12 @@ PalindromoAir pali;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void imprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imprimirActionPerformed
-    pali.printPassengers();
+        lista.setText("");
+        pali.printPassengers();
     }//GEN-LAST:event_imprimirActionPerformed
     
     public void listado(String resultado){
-        lista.setText(resultado);
+        lista.setText(lista.getText()+"\n"+resultado);
     }
     /**
      * @param args the command line arguments
