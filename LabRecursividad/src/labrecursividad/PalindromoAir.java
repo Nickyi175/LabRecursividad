@@ -70,21 +70,7 @@ public static Ticket[] ticket;
       }
     
    //d)Print Passengers
-    
-//    public String printPassengers(){
-//        return printPassengers(0,"");
-//    }
-//    private String printPassengers(int posicion,String DatosGeneral){
-//        if(posicion>=ticket.length){
-//           if(ticket[posicion]!=null){
-//               String info="\nNombre: "+ticket[posicion].getNombrePasajero()+" - Total: $"+ticket[posicion].getTotalPagado();
-//           //ticket[posicion].print();
-//           return printPassengers(posicion+1,DatosGeneral+info);
-//
-//        }
-//        }
-//        return DatosGeneral;
-//    }
+
     public void printPassengers(){
        printPassengers(0);
     }
@@ -120,14 +106,15 @@ public static Ticket[] ticket;
     //g)Sell Ticket
     
     public void sellTicket(String nombrePasajero){
-       
         totalPago=0;
         posicion = firstAvailable(); 
         if(posicion!=-1){
             if(isPalindromo(nombrePasajero)==false){
                 totalPago=800;
+                JOptionPane.showMessageDialog(null, "¡Pasajero ingresado exitosamente!");
             }
             else{
+                JOptionPane.showMessageDialog(null, "¡Pasajero ingresado exitosamente!\nYa que su nombre es palindromo \nha recibido un 20% de descuento");
                 totalPago=800*0.8;
             }
             ticket[firstAvailable()] = new Ticket(nombrePasajero, totalPago,main);
@@ -150,11 +137,8 @@ public static Ticket[] ticket;
           reset(posicion+1);      
     }
     
-    
-    
     //h)Cancel Ticket
      public boolean cancelTicket(String nombrePasajero){
-        
          if (buscarPasajero(nombrePasajero,0)!=-1){
          ticket [posicion]=null;
      }else{
@@ -165,10 +149,11 @@ public static Ticket[] ticket;
     
     //i) dispatch
      public void dispatch(){
-         
+         JOptionPane.showMessageDialog(null, "Ingreso generado: $"+income());
          System.out.println("Ingreso generado: "+income());
          reset(0);
          totalIngresos=0;
+         JOptionPane.showMessageDialog(null,"¡El avión fue despachado exitosamente!");
      }
 }
 //public class PalindromoAir {

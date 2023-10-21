@@ -52,12 +52,12 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton1" linkSize="1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="vender" linkSize="1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="jButton2" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton3" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cancelar" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="despachar" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="imprimir" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton5" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="salir" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
@@ -80,9 +80,9 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jButton1" linkSize="2" min="-2" pref="47" max="-2" attributes="0"/>
+                          <Component id="vender" linkSize="2" min="-2" pref="47" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jButton2" linkSize="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="cancelar" linkSize="2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
@@ -94,11 +94,11 @@
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jButton3" linkSize="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="despachar" linkSize="2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="imprimir" linkSize="2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jButton5" linkSize="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="salir" linkSize="2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jScrollPane1" min="-2" pref="165" max="-2" attributes="0"/>
                   </Group>
@@ -119,7 +119,7 @@
             <Property name="text" type="java.lang.String" value="RECURSIVE AIRLINE"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="vender">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
@@ -133,11 +133,11 @@
             <Property name="text" type="java.lang.String" value="Vender"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="venderMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="venderActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="cancelar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
@@ -151,10 +151,10 @@
             <Property name="text" type="java.lang.String" value="Cancelar Boletos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="despachar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
@@ -168,7 +168,7 @@
             <Property name="text" type="java.lang.String" value="Despachar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="despacharActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="imprimir">
@@ -188,7 +188,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imprimirActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="salir">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
@@ -202,7 +202,7 @@
             <Property name="text" type="java.lang.String" value="Salir"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton5MouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="salirMouseClicked"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="nombre">

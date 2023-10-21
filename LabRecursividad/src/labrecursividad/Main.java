@@ -8,10 +8,11 @@ import javax.swing.JOptionPane;
 
 public class Main extends javax.swing.JFrame {
 
-PalindromoAir pali;
+    PalindromoAir pali;
+
     public Main() {
 
-        pali=new PalindromoAir(this);
+        pali = new PalindromoAir(this);
 
         initComponents();
         setLocationRelativeTo(null);
@@ -28,11 +29,11 @@ PalindromoAir pali;
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        vender = new javax.swing.JButton();
+        cancelar = new javax.swing.JButton();
+        despachar = new javax.swing.JButton();
         imprimir = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
         nombre = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         lista = new javax.swing.JTextArea();
@@ -46,38 +47,38 @@ PalindromoAir pali;
         jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setText("RECURSIVE AIRLINE");
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
-        jButton1.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(204, 204, 204));
-        jButton1.setText("Vender");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        vender.setBackground(new java.awt.Color(0, 102, 102));
+        vender.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
+        vender.setForeground(new java.awt.Color(204, 204, 204));
+        vender.setText("Vender");
+        vender.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                venderMouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        vender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setBackground(new java.awt.Color(0, 102, 102));
-        jButton2.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(204, 204, 204));
-        jButton2.setText("Cancelar Boletos");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                venderActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(0, 102, 102));
-        jButton3.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(204, 204, 204));
-        jButton3.setText("Despachar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        cancelar.setBackground(new java.awt.Color(0, 102, 102));
+        cancelar.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
+        cancelar.setForeground(new java.awt.Color(204, 204, 204));
+        cancelar.setText("Cancelar Boletos");
+        cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                cancelarActionPerformed(evt);
+            }
+        });
+
+        despachar.setBackground(new java.awt.Color(0, 102, 102));
+        despachar.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
+        despachar.setForeground(new java.awt.Color(204, 204, 204));
+        despachar.setText("Despachar");
+        despachar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                despacharActionPerformed(evt);
             }
         });
 
@@ -91,13 +92,13 @@ PalindromoAir pali;
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(0, 102, 102));
-        jButton5.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(204, 204, 204));
-        jButton5.setText("Salir");
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+        salir.setBackground(new java.awt.Color(0, 102, 102));
+        salir.setFont(new java.awt.Font("Broadway", 0, 14)); // NOI18N
+        salir.setForeground(new java.awt.Color(204, 204, 204));
+        salir.setText("Salir");
+        salir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
+                salirMouseClicked(evt);
             }
         });
 
@@ -126,12 +127,12 @@ PalindromoAir pali;
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(86, 86, 86)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(vender, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton2)
-                                .addComponent(jButton3)
+                                .addComponent(cancelar)
+                                .addComponent(despachar)
                                 .addComponent(imprimir)
-                                .addComponent(jButton5)))
+                                .addComponent(salir)))
                         .addGap(70, 70, 70)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -140,7 +141,7 @@ PalindromoAir pali;
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {imprimir, jButton1, jButton2, jButton3, jButton5});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cancelar, despachar, imprimir, salir, vender});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,9 +151,9 @@ PalindromoAir pali;
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(vender, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(cancelar)
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -161,16 +162,16 @@ PalindromoAir pali;
                         .addGap(39, 39, 39)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(despachar)
                         .addGap(18, 18, 18)
                         .addComponent(imprimir)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton5))
+                        .addComponent(salir))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {imprimir, jButton1, jButton2, jButton3, jButton5});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {cancelar, despachar, imprimir, salir, vender});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -186,52 +187,62 @@ PalindromoAir pali;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+    private void salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseClicked
         System.exit(0);
-    }//GEN-LAST:event_jButton5MouseClicked
+    }//GEN-LAST:event_salirMouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void venderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_venderMouseClicked
         lista.setText("");
-        pali.sellTicket(nombre.getText());
-    }//GEN-LAST:event_jButton1MouseClicked
+        if (nombre.getText().isBlank() || nombre.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "¡Debe ingresar su nombre!", null, JOptionPane.WARNING_MESSAGE);
+        } else {
+            pali.sellTicket(nombre.getText());
+            nombre.setText("");
+        }
+    }//GEN-LAST:event_venderMouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
         lista.setText("");
         for (int i = 0; i < pali.ticket.length; i++) {
             if (pali.ticket[i] == null) {
-                System.out.println(i);
-                System.out.println("hubo break");
-
+//                System.out.println(i);
+//                System.out.println("hubo break");
             }
             //System.out.println(pali.ticket[i].nombrePasajero+" a");
         }
-        boolean cancelResult = pali.cancelTicket(nombre.getText());
-        if (cancelResult) {
-            JOptionPane.showMessageDialog(null, "Se canceló");
-            System.out.println("Ticket Cancelado");
+        if (nombre.getText().isBlank() || nombre.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "¡Debe ingresar su nombre!", null, JOptionPane.WARNING_MESSAGE);
         } else {
-            JOptionPane.showMessageDialog(null, "No se encontró");
-            System.out.println("Ticket No encontrado ");
+            boolean cancelResult = pali.cancelTicket(nombre.getText());
+            if (cancelResult) {
+                JOptionPane.showMessageDialog(null, "¡El ticket fue cancelado exitosamente!", null, JOptionPane.INFORMATION_MESSAGE);
+                System.out.println("Ticket Cancelado");
+            } else {
+                JOptionPane.showMessageDialog(null, "¡No fue posible encontrar el ticket!", "ERROR", JOptionPane.ERROR_MESSAGE);
+                System.out.println("Ticket No encontrado ");
+            }
+            nombre.setText("");
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_cancelarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void despacharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_despacharActionPerformed
         lista.setText("");
         pali.dispatch();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_despacharActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void venderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_venderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_venderActionPerformed
 
     private void imprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imprimirActionPerformed
         lista.setText("");
         pali.printPassengers();
     }//GEN-LAST:event_imprimirActionPerformed
-    
-    public void listado(String resultado){
-        lista.setText(lista.getText()+"\n"+resultado);
+
+    public void listado(String resultado) {
+        lista.setText(lista.getText() + "\n" + resultado);
     }
+
     /**
      * @param args the command line arguments
      */
@@ -268,16 +279,16 @@ PalindromoAir pali;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cancelar;
+    private javax.swing.JButton despachar;
     private javax.swing.JButton imprimir;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea lista;
     private javax.swing.JTextField nombre;
+    private javax.swing.JButton salir;
+    private javax.swing.JButton vender;
     // End of variables declaration//GEN-END:variables
 }
